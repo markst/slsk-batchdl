@@ -1,6 +1,6 @@
 FROM ghcr.io/linuxserver/baseimage-alpine:3.20 as base
 
-FROM base as build
+FROM --platform=$BUILDPLATFORM ghcr.io/linuxserver/baseimage-alpine:3.20 as build
 
 ARG TARGETPLATFORM
 ARG DOCKER_ARCH
